@@ -1,0 +1,57 @@
+====== LodgeNet训练开始 ======
+训练配置:
+  - 数据根目录: ./guanceng-bit
+  - JSON根目录: ./biaozhu_json
+  - 输出目录: ./output_lodgenet_fixed_20250524_181912
+  - 批次大小: 4
+  - 学习率: 0.0001
+  - 训练轮数: 50
+  - 图像尺寸: 128
+  - 使用设备: cuda
+  - GPU: Quadro RTX 6000
+  - GPU内存: 22.5 GB
+
+加载数据集...
+=== DataLoader 配置信息 ===
+批次大小: 4
+加载线程数: 0
+是否使用pin_memory: True
+prefetch_factor: 2
+是否使用扩展数据集: True
+已设置GDAL环境变量以优化性能
+检测到GPU: Quadro RTX 6000
+已创建数据增强，概率: 0.5
+正在创建数据集，数据根目录: ./guanceng-bit
+警告: JSON目录不存在: ./biaozhu_json\14l
+警告: JSON目录不存在: ./biaozhu_json\14m
+警告: JSON目录不存在: ./biaozhu_json\14t
+警告: JSON目录不存在: ./biaozhu_json\19l
+警告: JSON目录不存在: ./biaozhu_json\19m
+警告: JSON目录不存在: ./biaozhu_json\19t
+警告: JSON目录不存在: ./biaozhu_json\9l
+警告: JSON目录不存在: ./biaozhu_json\9m
+警告: JSON目录不存在: ./biaozhu_json\9t
+总共加载了 0 个样本
+数据集创建成功，样本数量: 0
+正在分割训练集和验证集...
+数据集分割成功
+数据集总大小: 0
+训练集大小: 0
+验证集大小: 0
+正在创建训练数据加载器...
+Traceback (most recent call last):
+  File "C:\Users\FANKK18\Desktop\LodgeNet1\lodgenet_train_fixed.py", line 624, in <module>
+    main(args) 
+    ^^^^^^^^^^
+  File "C:\Users\FANKK18\Desktop\LodgeNet1\lodgenet_train_fixed.py", line 449, in main
+    train_loader, val_loader = get_dataloaders(
+                               ^^^^^^^^^^^^^^^^
+  File "C:\Users\FANKK18\Desktop\LodgeNet1\dataset_fixed.py", line 511, in get_dataloaders
+    train_loader = DataLoader(
+                   ^^^^^^^^^^^
+  File "D:\anaconda3\Lib\site-packages\torch\utils\data\dataloader.py", line 383, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\Lib\site-packages\torch\utils\data\sampler.py", line 165, in __init__
+    raise ValueError(
+ValueError: num_samples should be a positive integer value, but got num_samples=0

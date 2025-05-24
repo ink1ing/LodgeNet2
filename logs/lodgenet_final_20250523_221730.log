@@ -1,0 +1,24 @@
+====================================================================================================
+LodgeNet最终优化训练日志 - RTX6000专用配置
+====================================================================================================
+开始时间: 2025-05-23 22:18:21
+命令: D:\anaconda3\python.exe train_lodgenet_optimized.py --data_root ./guanceng-bit --json_root ./biaozhu_json --batch_size 32 --num_epochs 5 --learning_rate 0.002 --num_workers 8 --img_size 256 --output_dir ./output_lodgenet_final_20250523_221730
+批次大小: 32
+图像尺寸: 256x256
+学习率: 0.002
+工作进程数: 8
+====================================================================================================
+
+================================================================================
+Traceback (most recent call last):
+  File "C:\Users\FANKK18\Desktop\LodgeNet1\train_lodgenet_optimized.py", line 517, in <module>
+    main() 
+    ^^^^^^
+  File "C:\Users\FANKK18\Desktop\LodgeNet1\train_lodgenet_optimized.py", line 365, in main
+    print("\U0001f680 LodgeNet优化训练脚本")
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f680' in position 0: illegal multibyte sequence
+
+====================================================================================================
+结束时间: 2025-05-23 22:18:28
+返回码: 1
+====================================================================================================
